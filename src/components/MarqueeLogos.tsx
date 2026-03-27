@@ -1,24 +1,5 @@
-const trustedLogos = [
-  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
-  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
-  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg",
-  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
-  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
-  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg",
-  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg",
-];
-
-const featuredLogos = [
-  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
-  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg",
-  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg",
-  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg",
-  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
-  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg",
-  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
-  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg",
-];
+const trustedLogos: string[] = [];
+const featuredLogos: string[] = [];
 
 const MarqueeLogos = ({
   title,
@@ -30,6 +11,7 @@ const MarqueeLogos = ({
   speed?: "normal" | "slow";
 }) => {
   const images = logos || trustedLogos;
+  if (images.length === 0) return null;
   const doubled = [...images, ...images];
 
   return (
@@ -41,7 +23,7 @@ const MarqueeLogos = ({
             <img
               key={i}
               src={logo}
-              alt="Technology logo"
+              alt="Partner logo"
               className="h-10 md:h-14 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity"
             />
           ))}

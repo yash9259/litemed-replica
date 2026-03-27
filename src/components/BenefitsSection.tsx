@@ -1,16 +1,16 @@
 import { motion } from "framer-motion";
-import { Zap, Shield, Globe, Rocket } from "lucide-react";
+import { BarChart3, Sparkles, Battery, ShieldCheck } from "lucide-react";
 
 const benefits = [
-  { icon: Zap, title: "Lightning Fast Delivery", desc: "Agile sprints and parallel workstreams to get your product to market faster." },
-  { icon: Shield, title: "Enterprise-Grade Security", desc: "Industry-standard encryption, secure APIs, and compliance-ready architecture." },
-  { icon: Globe, title: "Global Scalability", desc: "Cloud-native systems designed to handle users across geographies seamlessly." },
-  { icon: Rocket, title: "Post-Launch Support", desc: "Ongoing maintenance, performance monitoring, and feature enhancements." },
+  { icon: BarChart3, title: "Long-Term Progress Tracking", desc: "Detailed posture analysis with historical data so you can see your improvement journey over weeks and months." },
+  { icon: Sparkles, title: "AI-Based Personalised Plans", desc: "Smart exercise and correction recommendations tailored to your unique posture patterns and daily habits." },
+  { icon: Battery, title: "All-Day Comfort", desc: "Lightweight, discreet design that sits comfortably under clothing — designed for continuous daily wear." },
+  { icon: ShieldCheck, title: "Non-Invasive & Safe", desc: "No medication, no surgery — just intelligent sensor technology and gentle vibration therapy working with your body." },
 ];
 
 const BenefitsSection = () => {
   return (
-    <section id="why-us" className="py-20 bg-background">
+    <section id="benefits" className="py-20 bg-background">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -19,9 +19,9 @@ const BenefitsSection = () => {
           className="text-center mb-16"
         >
           <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4">
-            Why Choose <span className="text-primary">CodingHunters</span>?
+            Why <span className="text-primary">Aligneye Correct</span>?
           </h2>
-          <p className="text-muted-foreground">We bring expertise, speed, and reliability to every project</p>
+          <p className="text-muted-foreground">Invest in your posture health — feel your best every day</p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
@@ -47,7 +47,7 @@ const BenefitsSection = () => {
 
         <div className="text-center mt-10">
           <a href="#contact" className="bg-primary text-primary-foreground px-8 py-3 rounded-full font-semibold hover:opacity-90 transition-opacity">
-            Start Your Project
+            Pre-Order Now
           </a>
         </div>
       </div>

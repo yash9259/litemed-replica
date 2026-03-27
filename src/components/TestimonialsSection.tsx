@@ -4,49 +4,42 @@ import { ChevronLeft, ChevronRight, BadgeCheck } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Marcus Weber",
-    condition: "Food Delivery App — Germany",
-    quote: "CodingHunters delivered our food delivery platform in record time. The real-time tracking and payment integration work flawlessly. Our user base has grown 300% since launch.",
+    name: "Early Tester",
+    condition: "Office Worker — Chandigarh",
+    quote: "After wearing Aligneye Correct for just two weeks, I noticed a dramatic improvement in my sitting posture. The gentle vibrations are a perfect reminder without being intrusive.",
   },
   {
-    name: "Priya Sharma",
-    condition: "E-Commerce Platform — India",
-    quote: "Their backend architecture handles our 50K+ daily orders without a hitch. The team's attention to performance and scalability is unmatched.",
+    name: "Beta User",
+    condition: "Software Engineer — Delhi",
+    quote: "As someone who spends 10+ hours at a desk, this device has been a game changer. The app insights help me understand my posture patterns throughout the day.",
   },
   {
-    name: "David Chen",
-    condition: "SaaS Dashboard — USA",
-    quote: "From complex data visualizations to real-time analytics, CodingHunters built exactly what we envisioned. The UI is clean and our customers love it.",
-  },
-  {
-    name: "Sarah Johnson",
-    condition: "Healthcare App — UK",
-    quote: "They understood our compliance requirements perfectly. The app is HIPAA-ready, performant, and our patients find it incredibly easy to use.",
-  },
-  {
-    name: "Ahmed Al-Rashid",
-    condition: "Logistics Platform — UAE",
-    quote: "CodingHunters transformed our manual logistics into a fully automated system. Real-time fleet tracking and route optimization saved us 40% in costs.",
+    name: "Pilot Programme",
+    condition: "Physiotherapist — Mumbai",
+    quote: "I recommend posture correction to all my patients. Aligneye Correct provides the continuous monitoring that traditional methods cannot — it's the future of posture health.",
   },
 ];
 
-const TestimonialsSection = ({ title = "What Our Clients Say" }: { title?: string }) => {
+const TestimonialsSection = ({ title = "Early Feedback & Reviews" }: { title?: string }) => {
   const [current, setCurrent] = useState(0);
 
   const next = () => setCurrent((prev) => (prev + 1) % testimonials.length);
   const prev = () => setCurrent((prev) => (prev - 1 + testimonials.length) % testimonials.length);
 
   return (
-    <section id="testimonials" className="py-20 bg-background">
+    <section id="reviews" className="py-20 bg-background">
       <div className="container mx-auto px-6">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="font-heading text-3xl md:text-4xl font-bold text-center mb-12"
+          className="font-heading text-3xl md:text-4xl font-bold text-center mb-4"
         >
           {title}
         </motion.h2>
+        <p className="text-muted-foreground text-center mb-12 max-w-xl mx-auto text-sm">
+          Customer reviews and certifications will be updated as the product launches. Here's early feedback from our pilot programme.
+        </p>
 
         <div className="relative max-w-3xl mx-auto">
           <button onClick={prev} className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-12 bg-secondary hover:bg-secondary/80 p-2 rounded-full transition-colors hidden md:block">
@@ -73,7 +66,7 @@ const TestimonialsSection = ({ title = "What Our Clients Say" }: { title?: strin
             <div className="flex items-center justify-center gap-2">
               <span className="font-heading font-bold text-foreground">{testimonials[current].name}</span>
               <BadgeCheck className="w-4 h-4 text-accent" />
-              <span className="text-muted-foreground text-sm">Verified Client</span>
+              <span className="text-muted-foreground text-sm">Pilot Programme</span>
             </div>
           </motion.div>
 

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 const AnnouncementBar = () => {
-  const [time, setTime] = useState({ days: 3, hours: 12, mins: 45, secs: 30 });
+  const [time, setTime] = useState({ days: 5, hours: 18, mins: 30, secs: 0 });
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -23,7 +23,7 @@ const AnnouncementBar = () => {
   return (
     <div className="bg-primary/10 backdrop-blur-sm py-2 px-4 flex items-center justify-center gap-4 text-sm border-b border-border">
       <span className="text-foreground font-medium">
-        🚀 Limited Offer: 30% OFF on all development packages — Ends In
+        🚀 Early Bird Pre-Order — Limited Spots Available — Ends In
       </span>
       <div className="flex gap-2">
         {[

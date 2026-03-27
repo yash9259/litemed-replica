@@ -1,20 +1,31 @@
+import { Activity } from "lucide-react";
+
 const FooterSection = () => {
   return (
     <footer className="bg-secondary border-t border-border py-12">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <h3 className="font-heading text-xl font-bold text-foreground mb-4">CURAPOD</h3>
+            <div className="flex items-center gap-2 mb-4">
+              <Activity className="w-6 h-6 text-primary" />
+              <h3 className="font-heading text-xl font-bold text-foreground">ALIGNEYE</h3>
+            </div>
             <p className="text-muted-foreground text-sm leading-relaxed">
-              by Litemed — A compact, wearable light therapy device designed to help relieve joint pain & muscle discomfort.
+              Aligneye Vision Private Limited — A wearable posture correction device that monitors and improves your posture throughout the day.
             </p>
           </div>
           <div>
             <h4 className="font-heading font-semibold text-foreground mb-4">Quick Links</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              {["Home", "How Curapod Works", "Clinical Trials", "Reviews", "Contact"].map((l) => (
-                <li key={l}>
-                  <a href="#" className="hover:text-foreground transition-colors">{l}</a>
+              {[
+                { label: "Home", href: "#home" },
+                { label: "Features", href: "#features" },
+                { label: "How It Works", href: "#how-it-works" },
+                { label: "Reviews", href: "#reviews" },
+                { label: "Contact", href: "#contact" },
+              ].map((l) => (
+                <li key={l.label}>
+                  <a href={l.href} className="hover:text-foreground transition-colors">{l.label}</a>
                 </li>
               ))}
             </ul>
@@ -32,13 +43,14 @@ const FooterSection = () => {
           <div>
             <h4 className="font-heading font-semibold text-foreground mb-4">Contact</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>support@litemed.co.in</li>
-              <li>Hyderabad, India</li>
+              <li>aligneye@gmail.com</li>
+              <li>+91 99551 65091</li>
+              <li>TBI Block-3, UIET, Panjab University, Chandigarh — 160014</li>
             </ul>
           </div>
         </div>
         <div className="border-t border-border mt-10 pt-6 text-center text-sm text-muted-foreground">
-          © 2024 Litemed. All rights reserved.
+          © 2026 Aligneye Vision Private Limited. All rights reserved.
         </div>
       </div>
     </footer>

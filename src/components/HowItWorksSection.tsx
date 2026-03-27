@@ -3,23 +3,23 @@ import { motion } from "framer-motion";
 const steps = [
   {
     num: 1,
-    title: "Share Your Vision",
-    desc: "Tell us about your project goals, target audience, and technical requirements. We listen first to understand deeply.",
+    title: "Attach to Upper Back",
+    desc: "Place the Aligneye Correct device at the centre of your upper back, aligned with your spine. The adhesive mount keeps it secure all day.",
   },
   {
     num: 2,
-    title: "Strategic Planning",
-    desc: "Our team creates a detailed roadmap with architecture design, tech stack selection, and milestone-based timelines.",
+    title: "Sensors Detect Posture",
+    desc: "Embedded motion sensors continuously track the orientation and movement of your upper back, detecting slouching or misalignment in real time.",
   },
   {
     num: 3,
-    title: "Agile Development",
-    desc: "We build iteratively with sprint cycles, regular demos, and continuous feedback loops to ensure alignment.",
+    title: "Get Gentle Alerts",
+    desc: "When poor posture is detected for a prolonged period, the device delivers gentle vibration alerts to remind you to sit or stand upright.",
   },
   {
     num: 4,
-    title: "Launch & Scale",
-    desc: "We deploy, monitor, and optimize your product — then help you scale as your user base grows.",
+    title: "Track & Improve",
+    desc: "Data syncs to the companion app where you can view daily insights, posture analytics, and AI-powered exercise recommendations to improve over time.",
   },
 ];
 
@@ -34,10 +34,10 @@ const HowItWorksSection = () => {
           className="text-center mb-16"
         >
           <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4">
-            From Idea to Launch in <span className="text-primary">4 Steps</span>
+            Better Posture in <span className="text-primary">4 Simple Steps</span>
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
-            Our proven process ensures your project is delivered on time, on budget, and beyond expectations.
+            Aligneye Correct works silently in the background — you just wear it and let the technology do the rest.
           </p>
         </motion.div>
 
