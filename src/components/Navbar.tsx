@@ -1,13 +1,12 @@
 import { useState } from "react";
-import { Menu, X, Code2 } from "lucide-react";
+import { Menu, X, Activity } from "lucide-react";
 
 const navLinks = [
   { label: "Home", href: "#home" },
-  { label: "Services", href: "#services" },
+  { label: "Features", href: "#features" },
   { label: "How It Works", href: "#how-it-works" },
-  { label: "Why Us", href: "#why-us" },
-  { label: "Testimonials", href: "#testimonials" },
-  { label: "Blog", href: "#blog" },
+  { label: "Benefits", href: "#benefits" },
+  { label: "Reviews", href: "#reviews" },
   { label: "FAQ", href: "#faq" },
   { label: "Contact", href: "#contact" },
 ];
@@ -18,19 +17,20 @@ const Navbar = () => {
   return (
     <nav className="sticky top-0 z-50 bg-card/90 backdrop-blur-md border-b border-border">
       <div className="container mx-auto flex items-center justify-between py-4 px-6">
-        <div className="flex items-center gap-2">
-          <Code2 className="w-7 h-7 text-primary" />
-          <span className="font-heading text-2xl font-bold tracking-wider text-foreground">CodingHunters</span>
-        </div>
+        <a href="#home" className="flex items-center gap-2">
+          <Activity className="w-7 h-7 text-primary" />
+          <div>
+            <span className="font-heading text-xl font-bold tracking-wider text-foreground">ALIGNEYE</span>
+            <span className="text-muted-foreground text-[10px] block -mt-1 tracking-widest">CORRECT</span>
+          </div>
+        </a>
 
         <div className="hidden lg:flex items-center gap-6">
           {navLinks.map((link) => (
             <a
               key={link.label}
               href={link.href}
-              className={`text-sm font-medium transition-colors hover:text-primary ${
-                link.label === "Home" ? "text-foreground bg-secondary/60 px-3 py-1.5 rounded-md" : "text-muted-foreground"
-              }`}
+              className="text-sm font-medium transition-colors hover:text-primary text-muted-foreground"
             >
               {link.label}
             </a>
@@ -39,7 +39,7 @@ const Navbar = () => {
 
         <div className="flex items-center gap-4">
           <a href="#contact" className="hidden lg:block bg-primary text-primary-foreground px-5 py-2 rounded-full text-sm font-semibold hover:opacity-90 transition-opacity">
-            Get a Quote
+            Pre-Order Now
           </a>
           <button className="lg:hidden" onClick={() => setMobileOpen(!mobileOpen)}>
             {mobileOpen ? <X className="w-6 h-6 text-foreground" /> : <Menu className="w-6 h-6 text-foreground" />}
@@ -55,7 +55,7 @@ const Navbar = () => {
             </a>
           ))}
           <a href="#contact" className="block w-full bg-primary text-primary-foreground py-2.5 rounded-full text-sm font-semibold mt-2 text-center">
-            Get a Quote
+            Pre-Order Now
           </a>
         </div>
       )}

@@ -6,49 +6,49 @@
 
 @layer base {
   :root {
-    --background: 220 20% 4%;
-    --foreground: 210 20% 95%;
+    --background: 210 25% 4%;
+    --foreground: 180 15% 95%;
 
-    --card: 220 20% 7%;
-    --card-foreground: 210 20% 95%;
+    --card: 210 20% 7%;
+    --card-foreground: 180 15% 95%;
 
-    --popover: 220 20% 7%;
-    --popover-foreground: 210 20% 95%;
+    --popover: 210 20% 7%;
+    --popover-foreground: 180 15% 95%;
 
-    --primary: 210 100% 55%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 168 80% 48%;
+    --primary-foreground: 210 25% 4%;
 
-    --secondary: 220 20% 12%;
-    --secondary-foreground: 210 20% 95%;
+    --secondary: 210 18% 12%;
+    --secondary-foreground: 180 15% 95%;
 
-    --muted: 220 15% 14%;
-    --muted-foreground: 215 15% 55%;
+    --muted: 210 15% 14%;
+    --muted-foreground: 200 12% 55%;
 
-    --accent: 170 80% 45%;
+    --accent: 260 70% 60%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 15% 16%;
-    --input: 220 15% 16%;
-    --ring: 210 100% 55%;
+    --border: 210 15% 15%;
+    --input: 210 15% 15%;
+    --ring: 168 80% 48%;
 
     --radius: 0.75rem;
 
-    --sidebar-background: 220 20% 5%;
-    --sidebar-foreground: 210 20% 95%;
-    --sidebar-primary: 210 100% 55%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 220 20% 10%;
-    --sidebar-accent-foreground: 210 20% 95%;
-    --sidebar-border: 220 15% 16%;
-    --sidebar-ring: 210 100% 55%;
+    --sidebar-background: 210 25% 5%;
+    --sidebar-foreground: 180 15% 95%;
+    --sidebar-primary: 168 80% 48%;
+    --sidebar-primary-foreground: 210 25% 4%;
+    --sidebar-accent: 210 18% 10%;
+    --sidebar-accent-foreground: 180 15% 95%;
+    --sidebar-border: 210 15% 15%;
+    --sidebar-ring: 168 80% 48%;
 
     /* Custom tokens */
-    --gradient-hero: radial-gradient(ellipse at center, hsl(210 100% 25% / 0.4) 0%, hsl(220 20% 4%) 70%);
-    --gradient-blue-glow: radial-gradient(circle, hsl(210 100% 50% / 0.2) 0%, transparent 70%);
-    --shadow-glow: 0 0 40px hsl(210 100% 55% / 0.3);
+    --gradient-hero: radial-gradient(ellipse at center, hsl(168 80% 25% / 0.3) 0%, hsl(210 25% 4%) 70%);
+    --gradient-glow: radial-gradient(circle, hsl(168 80% 48% / 0.15) 0%, transparent 70%);
+    --shadow-glow: 0 0 40px hsl(168 80% 48% / 0.25);
     --shadow-card: 0 4px 24px hsl(0 0% 0% / 0.4);
 
     --font-heading: 'Outfit', sans-serif;
@@ -95,8 +95,8 @@
 
 /* Pulse glow */
 @keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 20px hsl(210 100% 55% / 0.2); }
-  50% { box-shadow: 0 0 40px hsl(210 100% 55% / 0.5); }
+  0%, 100% { box-shadow: 0 0 20px hsl(168 80% 48% / 0.2); }
+  50% { box-shadow: 0 0 40px hsl(168 80% 48% / 0.5); }
 }
 .animate-pulse-glow {
   animation: pulse-glow 2s ease-in-out infinite;
@@ -116,7 +116,7 @@
   @apply bg-secondary rounded-lg px-3 py-2 text-center min-w-[60px];
 }
 
-/* Scroll snap for testimonials */
+/* Scroll snap */
 .snap-container {
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;

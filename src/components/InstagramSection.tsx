@@ -1,56 +1,45 @@
 import { motion } from "framer-motion";
-
-const images = [
-  "https://litemed.co.in/cdn/shop/files/curapod-your-wellness-partner.jpg?v=1721036534&width=1080",
-  "https://litemed.co.in/cdn/shop/files/pain-distributing-your-focus.jpg?v=1721036427&width=1080",
-  "https://litemed.co.in/cdn/shop/files/curapod-its-okay-to-be-a-human.jpg?v=1721036354&width=1080",
-  "https://litemed.co.in/cdn/shop/files/osteoarthritis-with-curapod.webp?v=1721036126&width=1080",
-  "https://litemed.co.in/cdn/shop/files/from-muscle-stiffness.webp?v=1721036049&width=1080",
-  "https://litemed.co.in/cdn/shop/files/pain-of-arthritis-and-sprains.webp?v=1721035933&width=1440",
-];
+import { Mail, Phone, MapPin } from "lucide-react";
 
 const InstagramSection = () => {
   return (
-    <section className="py-20 bg-card">
+    <section id="contact" className="py-20 bg-card">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-10"
+          className="text-center mb-12"
         >
           <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4">
-            Make Instagram's Favourite Pod Your Own!
+            Get in Touch
           </h2>
-          <p className="text-muted-foreground mb-6">
-            Join the Curapod family on our socials and know more about our go-to pain management device.
+          <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
+            Interested in Aligneye Correct? Have questions about bulk orders or partnerships? We'd love to hear from you.
           </p>
-          <a
-            href="https://www.instagram.com/curapod"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block bg-primary text-primary-foreground px-6 py-2.5 rounded-full font-semibold hover:opacity-90 transition-opacity"
-          >
-            Explore Now
-          </a>
         </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
-          {images.map((img, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.4, delay: i * 0.08 }}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          {[
+            { icon: Mail, title: "Email", value: "aligneye@gmail.com", href: "mailto:aligneye@gmail.com" },
+            { icon: Phone, title: "Phone", value: "+91 99551 65091", href: "tel:+919955165091" },
+            { icon: MapPin, title: "Address", value: "TBI Block-3, UIET, Panjab University, Chandigarh — 160014", href: "#" },
+          ].map((item, i) => (
+            <motion.a
+              key={item.title}
+              href={item.href}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: i * 0.1 }}
               viewport={{ once: true }}
-              className="rounded-xl overflow-hidden border border-border group cursor-pointer"
+              className="bg-background border border-border rounded-2xl p-6 text-center hover:border-primary/30 transition-colors block"
             >
-              <img
-                src={img}
-                alt="Curapod Instagram"
-                className="w-full h-40 md:h-48 object-cover group-hover:scale-110 transition-transform duration-500"
-              />
-            </motion.div>
+              <div className="bg-primary/10 p-3 rounded-xl w-fit mx-auto mb-4">
+                <item.icon className="w-6 h-6 text-primary" />
+              </div>
+              <h3 className="font-heading font-bold text-foreground mb-1">{item.title}</h3>
+              <p className="text-muted-foreground text-sm">{item.value}</p>
+            </motion.a>
           ))}
         </div>
       </div>

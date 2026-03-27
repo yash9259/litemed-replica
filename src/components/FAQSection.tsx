@@ -7,19 +7,19 @@ import {
 import { motion } from "framer-motion";
 
 const faqs = [
-  { q: "What is Curapod and how does it work?", a: "Curapod is a wearable light therapy device that uses red and near-infrared light to support your body's natural healing response. It works by improving local blood flow and cellular activity at the source of pain." },
-  { q: "What is red & near-infrared light therapy?", a: "It's a science-backed, non-invasive therapy that delivers specific wavelengths of light into the body to support circulation, tissue comfort, and recovery at a cellular level." },
-  { q: "What conditions can Curapod help with?", a: "Curapod is commonly used for joint and muscle discomfort including knee pain, back pain, neck pain, shoulder pain, arthritis, stiffness, sports soreness, and everyday strain." },
-  { q: "Does Curapod work for arthritis or chronic pain?", a: "Curapod does not cure arthritis, but many users managing chronic pain report reduced stiffness, better mobility, and improved daily comfort with consistent use." },
-  { q: "Is Curapod safe to use?", a: "Yes. Curapod is completely non-invasive, drug-free, and designed for regular daily use." },
-  { q: "Are there any side effects?", a: "No. Curapod has no known side effects when used as directed. It does not involve medication, heat, electrical stimulation, or invasive procedures." },
-  { q: "How often should I use Curapod?", a: "Usage depends on the pain type, but the recommended usage is 2–3 sessions per day for 10–14 days for the most effective results." },
-  { q: "How long does one session take?", a: "Each Curapod session typically lasts around 30 minutes and can be done while resting, working, or relaxing." },
+  { q: "What is Aligneye Correct?", a: "Aligneye Correct is a wearable posture correction device worn at the centre of the upper back, aligned with the spine. It continuously monitors posture using embedded motion sensors and delivers gentle vibration alerts when poor posture is detected." },
+  { q: "How does it detect poor posture?", a: "Embedded motion sensors track the orientation and movement of your upper back in real time. Built-in algorithms analyse posture behaviour patterns such as upright alignment or slouching, and trigger corrective vibration alerts when slouching persists." },
+  { q: "Is there a companion app?", a: "Yes. Collected data syncs with the Aligneye companion mobile app (iOS & Android) which provides daily posture insights, analytics, progress tracking, and AI-powered personalised exercise recommendations." },
+  { q: "How long should I wear it each day?", a: "Aligneye Correct is designed for all-day comfort. We recommend wearing it during your normal daily activities — especially during desk work, commuting, or any prolonged sitting periods." },
+  { q: "Is the device comfortable to wear?", a: "Yes. The device is lightweight and compact, designed to sit discreetly under clothing. The adhesive mount keeps it secure without causing discomfort during movement." },
+  { q: "What makes the AI recommendations unique?", a: "The AI-driven personalised therapy recommendation system analyses your unique posture patterns over time and generates custom exercise and correction plans tailored specifically to your needs." },
+  { q: "When will Aligneye Correct be available?", a: "We are currently in the pre-order phase. Join the waitlist to be among the first to receive the device when it launches. Pricing and shipping details will be announced soon." },
+  { q: "Who is behind Aligneye Correct?", a: "Aligneye Correct is developed by Aligneye Vision Private Limited, based at TBI Block-3, UIET, Panjab University, Chandigarh." },
 ];
 
 const FAQSection = () => {
   return (
-    <section className="py-20 bg-background">
+    <section id="faq" className="py-20 bg-background">
       <div className="container mx-auto px-6 max-w-3xl">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -27,7 +27,7 @@ const FAQSection = () => {
           viewport={{ once: true }}
           className="font-heading text-3xl md:text-4xl font-bold text-center mb-12"
         >
-          Got questions? We have answers!
+          Frequently Asked Questions
         </motion.h2>
 
         <Accordion type="single" collapsible className="space-y-3">

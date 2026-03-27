@@ -1,32 +1,32 @@
 import { motion } from "framer-motion";
-import { Smartphone, Server, CreditCard, Palette } from "lucide-react";
+import { Radar, Vibrate, Smartphone, Brain } from "lucide-react";
 
 const features = [
   {
+    icon: Radar,
+    title: "Real-Time Posture Tracking",
+    desc: "Embedded motion sensors continuously monitor the orientation and movement of your upper back, detecting posture patterns like upright alignment or slouching.",
+  },
+  {
+    icon: Vibrate,
+    title: "Intelligent Vibration Alerts",
+    desc: "When poor posture is detected for a prolonged period, Aligneye Correct delivers gentle haptic vibration feedback to encourage corrective action.",
+  },
+  {
     icon: Smartphone,
-    title: "End-to-End Mobile & Web Development",
-    desc: "We build cross-platform mobile apps and responsive web applications tailored to your business needs — from ideation to deployment.",
+    title: "Companion App Analytics",
+    desc: "Data syncs with the Aligneye mobile app providing daily insights, posture analytics, progress tracking, and detailed posture behaviour history.",
   },
   {
-    icon: Server,
-    title: "Scalable Backend & Database Architecture",
-    desc: "Robust, cloud-native backend systems designed to handle millions of users with high availability, security, and performance.",
-  },
-  {
-    icon: CreditCard,
-    title: "Payment Gateway & Real-Time Tracking",
-    desc: "Seamless integration of payment systems, live order tracking, push notifications, and real-time data sync for flawless user experiences.",
-  },
-  {
-    icon: Palette,
-    title: "Clean UI/UX with High Performance",
-    desc: "Pixel-perfect interfaces with intuitive navigation, optimized load times, and delightful micro-interactions that keep users engaged.",
+    icon: Brain,
+    title: "AI-Powered Recommendations",
+    desc: "A personalised therapy recommendation system powered by AI delivers custom exercise and correction plans based on your unique posture patterns.",
   },
 ];
 
 const FeaturesSection = () => {
   return (
-    <section id="services" className="py-20 bg-card">
+    <section id="features" className="py-20 bg-card">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -34,9 +34,9 @@ const FeaturesSection = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <p className="text-primary text-sm font-medium uppercase tracking-wider mb-2">What We Do</p>
-          <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4">Our Core Services</h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">We don't just build apps — we engineer complete business solutions that scale.</p>
+          <p className="text-primary text-sm font-medium uppercase tracking-wider mb-2">Key Features</p>
+          <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4">Smart Posture Technology</h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto">Worn at the centre of the upper back, aligned with your spine — Aligneye Correct works silently to improve your posture throughout the day.</p>
         </motion.div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {features.map((feature, i) => (

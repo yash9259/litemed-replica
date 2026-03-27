@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Monitor, Smartphone, Server as ServerIcon } from "lucide-react";
+import { Monitor, Smartphone as SmartphoneIcon, Activity } from "lucide-react";
 
 const ProductShowcase = () => {
   return (
@@ -11,16 +11,16 @@ const ProductShowcase = () => {
           viewport={{ once: true }}
           className="font-heading text-3xl md:text-4xl font-bold mb-4"
         >
-          Built for Every Platform
+          The Aligneye Ecosystem
         </motion.h2>
         <p className="text-muted-foreground mb-12 max-w-xl mx-auto">
-          We deliver seamless experiences across web, mobile, and backend — all from a single team.
+          A seamless experience from wearable device to companion app — your complete posture wellness system.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
           {[
-            { icon: Monitor, title: "Web Applications", desc: "React, Next.js, Vue — responsive, fast, and SEO-optimized." },
-            { icon: Smartphone, title: "Mobile Apps", desc: "Flutter & React Native for iOS and Android with native performance." },
-            { icon: ServerIcon, title: "Backend & APIs", desc: "Node.js, Python, Go — scalable microservices and REST/GraphQL APIs." },
+            { icon: Activity, title: "Wearable Device", desc: "Compact posture sensor worn on your upper back with embedded motion tracking technology." },
+            { icon: SmartphoneIcon, title: "Companion App", desc: "Daily insights, posture analytics, progress tracking, and personalised recommendations." },
+            { icon: Monitor, title: "Dashboard Analytics", desc: "Long-term posture behaviour analysis with AI-driven exercise and correction plans." },
           ].map((item, i) => (
             <motion.div
               key={item.title}
