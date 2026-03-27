@@ -1,24 +1,23 @@
 const trustedLogos = [
-  "https://litemed.co.in/cdn/shop/files/1.png?v=1767039492&width=710",
-  "https://litemed.co.in/cdn/shop/files/2.png?v=1767039493&width=710",
-  "https://litemed.co.in/cdn/shop/files/6.png?v=1767039493&width=710",
-  "https://litemed.co.in/cdn/shop/files/3.png?v=1767039493&width=710",
-  "https://litemed.co.in/cdn/shop/files/4.png?v=1767039492&width=710",
-  "https://litemed.co.in/cdn/shop/files/5.png?v=1767039493&width=710",
-  "https://litemed.co.in/cdn/shop/files/8.png?v=1767039493&width=710",
-  "https://litemed.co.in/cdn/shop/files/9.png?v=1767039494&width=710",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg",
 ];
 
 const featuredLogos = [
-  "https://litemed.co.in/cdn/shop/files/10.png?v=1767040150&width=710",
-  "https://litemed.co.in/cdn/shop/files/indian_express.png?v=1767384614&width=710",
-  "https://litemed.co.in/cdn/shop/files/11.png?v=1767040149&width=710",
-  "https://litemed.co.in/cdn/shop/files/12.png?v=1767040149&width=710",
-  "https://litemed.co.in/cdn/shop/files/13.png?v=1767040150&width=710",
-  "https://litemed.co.in/cdn/shop/files/14.png?v=1767040150&width=710",
-  "https://litemed.co.in/cdn/shop/files/15.png?v=1767040150&width=710",
-  "https://litemed.co.in/cdn/shop/files/16.png?v=1767040148&width=710",
-  "https://litemed.co.in/cdn/shop/files/17.png?v=1767040150&width=710",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg",
 ];
 
 const MarqueeLogos = ({
@@ -42,8 +41,8 @@ const MarqueeLogos = ({
             <img
               key={i}
               src={logo}
-              alt="Partner logo"
-              className="h-10 md:h-14 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity grayscale hover:grayscale-0"
+              alt="Technology logo"
+              className="h-10 md:h-14 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity"
             />
           ))}
         </div>

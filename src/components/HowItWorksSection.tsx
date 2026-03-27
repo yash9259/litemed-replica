@@ -3,33 +3,29 @@ import { motion } from "framer-motion";
 const steps = [
   {
     num: 1,
-    title: "Get Started",
-    desc: "Make sure to fully charge the device and familiarise yourself with its controls and instructions by consulting the user manual.",
-    img: "https://litemed.co.in/cdn/shop/files/curapod-device.jpg?v=1721041457&width=1146",
+    title: "Share Your Vision",
+    desc: "Tell us about your project goals, target audience, and technical requirements. We listen first to understand deeply.",
   },
   {
     num: 2,
-    title: "Identify the pain site",
-    desc: "Locate the exact area where you're feeling pain or discomfort. This is where the magic will happen.",
-    img: "https://litemed.co.in/cdn/shop/files/identify-the-pain-site.jpg?v=1721041422&width=1146",
+    title: "Strategic Planning",
+    desc: "Our team creates a detailed roadmap with architecture design, tech stack selection, and milestone-based timelines.",
   },
   {
     num: 3,
-    title: "Position the device",
-    desc: "Secure the device using the provided accessories, ensuring that it is in direct contact with your skin.",
-    img: "https://litemed.co.in/cdn/shop/files/position-the-device.jpg?v=1721041388&width=1146",
+    title: "Agile Development",
+    desc: "We build iteratively with sprint cycles, regular demos, and continuous feedback loops to ensure alignment.",
   },
   {
     num: 4,
-    title: "Ready, Set, Go!",
-    desc: "Begin with the therapy duration recommended in the user manual. Sit back and relax while Curapod works its wonders.",
-    img: "https://litemed.co.in/cdn/shop/files/hand-pain-relief.jpg?v=1721041348&width=1146",
+    title: "Launch & Scale",
+    desc: "We deploy, monitor, and optimize your product — then help you scale as your user base grows.",
   },
 ];
 
 const HowItWorksSection = () => {
   return (
-    <section className="py-20 bg-background">
+    <section id="how-it-works" className="py-20 bg-background">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -38,10 +34,10 @@ const HowItWorksSection = () => {
           className="text-center mb-16"
         >
           <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4">
-            Imagine saying goodbye to your pain in <span className="text-primary">30-minutes?</span>
+            From Idea to Launch in <span className="text-primary">4 Steps</span>
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
-            Curapod doesn't just provide temporary relief — it offers lasting results by promoting healing from within.
+            Our proven process ensures your project is delivered on time, on budget, and beyond expectations.
           </p>
         </motion.div>
 
@@ -55,18 +51,13 @@ const HowItWorksSection = () => {
               viewport={{ once: true }}
               className="text-center group"
             >
-              <div className="relative rounded-2xl overflow-hidden mb-6 border border-border">
-                <img
-                  src={step.img}
-                  alt={step.title}
-                  className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute top-4 left-4 w-10 h-10 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-heading font-bold text-lg">
+              <div className="relative bg-card rounded-2xl p-8 mb-6 border border-border hover:border-primary/30 transition-colors">
+                <div className="w-14 h-14 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-heading font-bold text-2xl mx-auto mb-4">
                   {step.num}
                 </div>
+                <h3 className="font-heading text-lg font-bold text-foreground mb-2">{step.title}</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">{step.desc}</p>
               </div>
-              <h3 className="font-heading text-lg font-bold text-foreground mb-2">{step.title}</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">{step.desc}</p>
             </motion.div>
           ))}
         </div>

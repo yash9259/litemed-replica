@@ -4,45 +4,40 @@ import { ChevronLeft, ChevronRight, BadgeCheck } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Sashidhar",
-    condition: "Back pain",
-    quote: "Daily riding caused constant back and body pain, and I relied on painkillers. With regular use twice a day, CuraPod helped me manage my pain, sleep better, and stop taking pain medication.",
+    name: "Marcus Weber",
+    condition: "Food Delivery App — Germany",
+    quote: "CodingHunters delivered our food delivery platform in record time. The real-time tracking and payment integration work flawlessly. Our user base has grown 300% since launch.",
   },
   {
-    name: "Agomoni",
-    condition: "Fibromyalgia",
-    quote: "Using Curapod for my condition of fibromyalgia as part of my routine helps reduce my pain by around 50–60% for several hours, often allowing me to get back to my day.",
+    name: "Priya Sharma",
+    condition: "E-Commerce Platform — India",
+    quote: "Their backend architecture handles our 50K+ daily orders without a hitch. The team's attention to performance and scalability is unmatched.",
   },
   {
-    name: "Savitha",
-    condition: "Shoulder Stiffness",
-    quote: "With Curapod, I noticed a significant reduction in stiffness and pain within the first month, even with irregular use.",
+    name: "David Chen",
+    condition: "SaaS Dashboard — USA",
+    quote: "From complex data visualizations to real-time analytics, CodingHunters built exactly what we envisioned. The UI is clean and our customers love it.",
   },
   {
-    name: "Dr. Ramesh Chiluvery",
-    condition: "Knee, Back and Neck Pain",
-    quote: "Excellent results after just two sittings. Significant pain relief for me and my patients.",
+    name: "Sarah Johnson",
+    condition: "Healthcare App — UK",
+    quote: "They understood our compliance requirements perfectly. The app is HIPAA-ready, performant, and our patients find it incredibly easy to use.",
   },
   {
-    name: "Anifa Anam",
-    condition: "Lower Back pain",
-    quote: "Noticeable pain relief within 30 minutes. Easy to apply and highly effective.",
-  },
-  {
-    name: "Dr. Rajesh",
-    condition: "Knee pain",
-    quote: "Mom saw results in 7 to 10 days. Around 80% pain relief with consistent usage of Curapod.",
+    name: "Ahmed Al-Rashid",
+    condition: "Logistics Platform — UAE",
+    quote: "CodingHunters transformed our manual logistics into a fully automated system. Real-time fleet tracking and route optimization saved us 40% in costs.",
   },
 ];
 
-const TestimonialsSection = ({ title = "Real people. Real pain. Real relief." }: { title?: string }) => {
+const TestimonialsSection = ({ title = "What Our Clients Say" }: { title?: string }) => {
   const [current, setCurrent] = useState(0);
 
   const next = () => setCurrent((prev) => (prev + 1) % testimonials.length);
   const prev = () => setCurrent((prev) => (prev - 1 + testimonials.length) % testimonials.length);
 
   return (
-    <section className="py-20 bg-background">
+    <section id="testimonials" className="py-20 bg-background">
       <div className="container mx-auto px-6">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -78,7 +73,7 @@ const TestimonialsSection = ({ title = "Real people. Real pain. Real relief." }:
             <div className="flex items-center justify-center gap-2">
               <span className="font-heading font-bold text-foreground">{testimonials[current].name}</span>
               <BadgeCheck className="w-4 h-4 text-accent" />
-              <span className="text-muted-foreground text-sm">Verified Customer</span>
+              <span className="text-muted-foreground text-sm">Verified Client</span>
             </div>
           </motion.div>
 
@@ -96,12 +91,6 @@ const TestimonialsSection = ({ title = "Real people. Real pain. Real relief." }:
               />
             ))}
           </div>
-        </div>
-
-        <div className="text-center mt-10">
-          <button className="bg-primary text-primary-foreground px-8 py-3 rounded-full font-semibold hover:opacity-90 transition-opacity">
-            Order Now
-          </button>
         </div>
       </div>
     </section>
