@@ -59,7 +59,7 @@ const HeroSection = () => {
             <div className="relative">
               <div className="absolute inset-0 bg-primary/20 rounded-full blur-3xl animate-pulse-glow" />
               <img
-                src="/placeholder.svg"
+                src="/productimg/image1.png"
                 alt="Aligneye Correct posture correction device"
                 className="relative w-80 h-80 md:w-96 md:h-96 object-contain animate-float"
               />
