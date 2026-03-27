@@ -1,16 +1,16 @@
 import { motion } from "framer-motion";
-import { Zap, Shield, Activity, Target } from "lucide-react";
+import { Zap, Shield, Globe, Rocket } from "lucide-react";
 
 const benefits = [
-  { icon: Zap, title: "Instant Relief", desc: "Targets the source, allowing you to feel the difference in 30 minutes." },
-  { icon: Shield, title: "Clinically proven", desc: "Backed by research and used daily by 25,000+ users." },
-  { icon: Activity, title: "Non-Invasive", desc: "Say goodbye to medications and invasive procedures." },
-  { icon: Target, title: "Targets 30+ Conditions", desc: "Supporting your musculoskeletal journey with medical-grade tech." },
+  { icon: Zap, title: "Lightning Fast Delivery", desc: "Agile sprints and parallel workstreams to get your product to market faster." },
+  { icon: Shield, title: "Enterprise-Grade Security", desc: "Industry-standard encryption, secure APIs, and compliance-ready architecture." },
+  { icon: Globe, title: "Global Scalability", desc: "Cloud-native systems designed to handle users across geographies seamlessly." },
+  { icon: Rocket, title: "Post-Launch Support", desc: "Ongoing maintenance, performance monitoring, and feature enhancements." },
 ];
 
 const BenefitsSection = () => {
   return (
-    <section className="py-20 bg-background">
+    <section id="why-us" className="py-20 bg-background">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -19,9 +19,9 @@ const BenefitsSection = () => {
           className="text-center mb-16"
         >
           <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4">
-            Experience a life without pain with <span className="text-primary">Curapod</span>
+            Why Choose <span className="text-primary">CodingHunters</span>?
           </h2>
-          <p className="text-muted-foreground">Invest in your well-being and feel your best every day</p>
+          <p className="text-muted-foreground">We bring expertise, speed, and reliability to every project</p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
@@ -46,9 +46,9 @@ const BenefitsSection = () => {
         </div>
 
         <div className="text-center mt-10">
-          <button className="bg-primary text-primary-foreground px-8 py-3 rounded-full font-semibold hover:opacity-90 transition-opacity">
-            Order Now
-          </button>
+          <a href="#contact" className="bg-primary text-primary-foreground px-8 py-3 rounded-full font-semibold hover:opacity-90 transition-opacity">
+            Start Your Project
+          </a>
         </div>
       </div>
     </section>

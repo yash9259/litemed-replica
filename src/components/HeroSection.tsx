@@ -1,60 +1,53 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
-const painTypes = [
-  "Arthritis",
-  "Lower back pain",
-  "Fibromyalgia",
-  "Plantar Fasciitis",
-  "Post-operative pain",
-  "Cervical Spondylitis",
+const techTypes = [
+  "Food Delivery Apps",
+  "E-Commerce Platforms",
+  "SaaS Products",
+  "Mobile Applications",
+  "Real-Time Tracking Systems",
+  "Payment Integrations",
 ];
 
 const HeroSection = () => {
-  const [currentPain, setCurrentPain] = useState(0);
+  const [currentTech, setCurrentTech] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentPain((prev) => (prev + 1) % painTypes.length);
+      setCurrentTech((prev) => (prev + 1) % techTypes.length);
     }, 2500);
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <section className="relative overflow-hidden" style={{ background: "var(--gradient-hero)" }}>
-      {/* Hero banner image */}
-      <div className="relative">
-        <img
-          src="https://litemed.co.in/cdn/shop/files/Flash_Sale_Web.jpg?v=1773397453&width=2000"
-          alt="Curapod Flash Sale"
-          className="w-full h-auto object-cover"
-        />
-      </div>
-
-      {/* Pain relief text section */}
-      <div className="container mx-auto px-6 py-16 text-center">
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="font-heading text-2xl md:text-4xl lg:text-5xl font-bold leading-tight"
+    <section id="home" className="relative overflow-hidden" style={{ background: "var(--gradient-hero)" }}>
+      <div className="container mx-auto px-6 py-24 md:py-36 text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
         >
-          Begin your pain relief journey & say goodbye to{" "}
-          <span className="text-primary inline-block min-w-[200px]">
-            {painTypes[currentPain]}
-            <span className="animate-blink">|</span>
-          </span>
-        </motion.h2>
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          viewport={{ once: true }}
-          className="text-muted-foreground text-lg mt-6 max-w-2xl mx-auto"
-        >
-          Experience lasting relief from several kinds of pain with Curapod, your versatile go-to relief solution.
-        </motion.p>
+          <p className="text-primary font-medium text-sm uppercase tracking-widest mb-4">Engineering Complete Business Solutions</p>
+          <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
+            We Build Scalable<br />
+            <span className="text-primary inline-block min-w-[280px]">
+              {techTypes[currentTech]}
+              <span className="animate-blink">|</span>
+            </span>
+          </h1>
+          <p className="text-muted-foreground text-lg md:text-xl mt-6 max-w-3xl mx-auto leading-relaxed">
+            From real-time order tracking and vendor management to high-performance backend architecture and seamless user experience — we ensure your platform is reliable, fast, and ready to scale.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10">
+            <a href="#contact" className="bg-primary text-primary-foreground px-8 py-3.5 rounded-full font-semibold hover:opacity-90 transition-opacity text-lg">
+              Let's Connect
+            </a>
+            <a href="#services" className="border border-border text-foreground px-8 py-3.5 rounded-full font-semibold hover:bg-secondary transition-colors text-lg">
+              Our Services
+            </a>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
